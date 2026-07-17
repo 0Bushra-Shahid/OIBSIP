@@ -65,4 +65,4 @@ Chat_Application/
 ```
 
 ## Author
-Built as part of the Oasis Infobyte Python Programming Internship (Task 5).
+BUSHRA SHAHID
