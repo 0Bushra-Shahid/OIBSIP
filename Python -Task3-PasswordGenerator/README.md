@@ -52,12 +52,5 @@ cryptographically secure source of randomness. This project always
 uses `secrets.choice()` and a manual Fisher–Yates shuffle (also powered
 by `secrets`) instead of the insecure `random` equivalents.
 
-## 📷 Screenshots
-See the `screenshots/` folder in this repository for the app in action.
-
-## 🎥 Demo Video
-Linked in the task submission form / LinkedIn post.
-
 ## 👤 Author
-Submitted as part of the **Oasis Infobyte Summer Internship Program (SIP)**
-— Python Programming Track.
+BUSHRA SHAHID
