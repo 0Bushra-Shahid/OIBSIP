@@ -1,0 +1,42 @@
+<!-- chat.html: main chat interface with rooms and real-time messaging -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Socket.IO client library from CDN -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+
+        <!-- Sidebar: room join/create -->
+        <div class="sidebar">
+            <h3>Welcome, {{ username }}</h3>
+            <a href="{{ url_for('logout') }}">Logout</a>
+            <hr>
+            <h4>Join / Create Room</h4>
+            <input type="text" id="room-input" placeholder="Room name">
+            <button id="join-btn">Join Room</button>
+        </div>
+
+        <!-- Main chat window -->
+        <div class="chat-window">
+            <h3 id="current-room">No room joined</h3>
+            <div id="messages" class="messages-box"></div>
+
+            <div class="message-input">
+                <input type="text" id="message-input" placeholder="Type a message... (try :smile:)" disabled>
+                <button id="send-btn" disabled>Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pass logged-in username from Flask to JavaScript -->
+    <script>
+        const username = "{{ username }}";
+    </script>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
